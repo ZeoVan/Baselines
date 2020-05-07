@@ -254,10 +254,10 @@ def main(opt):
                 all_predicted_labels.extend(predicted_labels)
                 all_ground_truth_labels.extend(ground_truth_labels)
 
-            average_f1_scores = f1_score(all_predicted_labels, all_ground_truth_labels)
-            average_accuracy_scores = accuracy_score(all_predicted_labels, all_ground_truth_labels)
-            average_precision_scores = precision_score(all_predicted_labels, all_ground_truth_labels)
-            average_recall_scores = recall_score(all_predicted_labels, all_ground_truth_labels)
+            average_f1_scores = f1_score(all_ground_truth_labels,all_predicted_labels)
+            average_accuracy_scores = accuracy_score(all_ground_truth_labels,all_predicted_labels)
+            average_precision_scores = precision_score(all_ground_truth_labels,all_predicted_labels)
+            average_recall_scores = recall_score(all_ground_truth_labels,all_predicted_labels)
 
             print("Test with F1 score ", average_f1_scores)
             print("Test with accuracy score ", average_accuracy_scores)
